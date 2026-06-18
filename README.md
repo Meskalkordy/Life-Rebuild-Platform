@@ -71,14 +71,30 @@ Life-Rebuild/
 │   └── database (1).sql     # MySQL relational database schema migration file
 │
 └── ui-ux/                   # System analysis, wireframes, and interactive prototypes
-
 ## 👥 The Development Team & Credits
 
-| Academic Title & Name | Core Technical Role |
-| :--- | :--- |
-| 🎓 **Mesk Z. Alkordy** | Lead Front-End Developer & UI Engineer |
-| 🎓 **Rawan K. Salem** | Lead Back-End Developer & Database Architect |
-| 🎓 **Hadeel R. Rajab** | UI/UX Designer & Requirements Analyst |
+<table width="100%">
+  <thead>
+    <tr>
+      <th align="left">Academic Title & Name</th>
+      <th align="left">Core Technical Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>🎓 <strong>Mesk Z. Alkordy</strong></td>
+      <td>Lead Front-End Developer & UI Engineer</td>
+    </tr>
+    <tr>
+      <td>🎓 <strong>Rawan K. Salem</strong></td>
+      <td>Lead Back-End Developer & Database Architect</td>
+    </tr>
+    <tr>
+      <td>🎓 <strong>Hadeel R. Rajab</strong></td>
+      <td>UI/UX Designer & Requirements Analyst</td>
+    </tr>
+  </tbody>
+</table>
 
 <br>
 
