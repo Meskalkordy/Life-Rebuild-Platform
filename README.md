@@ -71,7 +71,7 @@ Life-Rebuild/
 │   └── database (1).sql     # MySQL relational database schema migration file
 │
 └── ui-ux/                   # System analysis, wireframes, and interactive prototypes
-
+---
 ## 👥 The Development Team & Credits
 
 | Academic Title & Name | Core Technical Role |
