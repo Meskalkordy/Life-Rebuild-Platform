@@ -60,35 +60,27 @@
 ```text
 Life-Rebuild/
 │
-├── frontend/               # واجهات المستخدم والـ Client-side (شغل مسك)
-│   ├── css/                # ملفات التنسيق والـ Grid Responsive
-│   ├── js/                 # الـ Logic الداخلي وربط الـ Fetch APIs
-│   ├── assets/             # الأيقونات والملفات المرئية والشعارات
-│   └── index.html          # لوحة التحكم الرئيسية للمنصة
+├── frontend/                # Client-side user interface and responsive web pages
+│   ├── css/                 # Stylesheets and responsive layout configurations
+│   ├── js/                  # Client-side logic and Fetch API integrations
+│   ├── assets/              # Media assets, icons, and platform branding
+│   └── index.html           # Main application landing page and dashboard
 │
-├── backend/                # السيرفر والـ Server-side (شغل روان)
-│   ├── config/             # إعدادات الاتصال بقاعدة البيانات (Database Connections)
-│   ├── controllers/        # منطق المعالجة (Auth, Request Approval Logic)
-│   ├── models/             # هيكلة الجداول (User, LossDocument, AidRequest Models)
-│   ├── routes/             # مسارات الـ REST API (Endpoints)
-│   └── server.js           # الملف الأساسي لتشغيل السيرفر
+├── backend/                 # Server-side architecture and data management
+│   ├── server/              # Node.js / Express.js application source code
+│   └── database (1).sql     # MySQL relational database schema migration file
 │
-├── ui-ux/                  # ملفات التصميم والتحليل (شغل هديل)
-│   ├── wireframes/         # مخططات واجهة المستخدم
-│   └── design_links.txt    # روابط مشروع الـ Adobe XD والـ Prototypes
-│
-└── 
----
+└── ui-ux/                   # System analysis, wireframes, and interactive prototypes
 
-## 👥 فريق العمل | The Development Team
+## 👥 The Development Team & Credits
 
-| الاسم (Name) | الدور البرمجي (Core Role) |
+| Academic Title & Name | Core Technical Role |
 | :--- | :--- |
-| 🎓 **مسك زهير الكردي** | Front-End Developer & UI Engineer |
-| 🎓 **روان خالد سالم** | Back-End Developer & Database Architect |
-| 🎓 **هديل رفعت رجب** | UI/UX Designer & Requirements Analyst |
+| 🎓 **Mesk Z. Alkordy** | Lead Front-End Developer & UI Engineer |
+| 🎓 **Rawan K. Salem** | Lead Back-End Developer & Database Architect |
+| 🎓 **Hadeel R. Rajab** | UI/UX Designer & Requirements Analyst |
 
 <br>
 
-### 👨‍🏫 تحت إشراف الدكتور الفاضل:
-**أ.د. أحمد أبو دبوسة (Dr. Ahmad Abu Dabbusa)**
+### 👨‍🏫 Under the Supervision of:
+**Prof. Dr. Ahmad Abu Dabousa**
