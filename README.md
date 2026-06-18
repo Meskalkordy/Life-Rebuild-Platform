@@ -72,15 +72,12 @@ Life-Rebuild/
 │
 └── ui-ux/                   # System analysis, wireframes, and interactive prototypes
 ---
+
+
 ## 👥 The Development Team & Credits
 
 | Academic Title & Name | Core Technical Role |
 | :--- | :--- |
-| 🎓 **Mesk Z. Alkordy** | Lead Front-End Developer & UI Engineer |
-| 🎓 **Rawan K. Salem** | Lead Back-End Developer & Database Architect |
-| 🎓 **Hadeel R. Rajab** | UI/UX Designer & Requirements Analyst |
-
-<br>
-
-### 👨‍🏫 Under the Supervision of:
-**Prof. Dr. Ahmad Abu Dabousa**
+| 🎓 Mesk Z. Alkordy | Lead Front-End Developer & UI Engineer |
+| 🎓 Rawan K. Salem | Lead Back-End Developer & Database Architect |
+| 🎓 Hadeel R. Rajab | UI/UX Designer & Requirements Analyst |
