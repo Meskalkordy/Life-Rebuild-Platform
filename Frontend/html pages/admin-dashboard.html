@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم الإدارة - إعادة البناء</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../Css/admin-style.css">
+    <link rel="stylesheet" href="../Css/header.css">
+</head>
+<body>
+ <header class="rb-main-header">
+    <div class="rb-header-container">
+        
+        <a href="index.html" class="rb-logo-wrapper">
+             <div class="rb-logo-icon">
+                <i class="fas fa-home"></i> </div>
+            <span class="rb-logo-text">إعادة البناء</span>
+           
+        </a>
+        <button class="rb-menu-toggle" id="rbMenuToggle" aria-label="قائمة التنقل">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="rb-overlay" id="rbOverlay"></div>
+
+        <nav class="rb-nav-box" id="rbNavBox">
+            <ul class="rb-nav-list">
+                    <li>
+                    <a href="../html pages/dashboard.html" class="rb-nav-link ">
+                        <i class="fas fa-th-large"></i> لوحة التحكم
+                    </a>
+                </li>
+                  <li>
+                    <a href="./document-loss.html" class="rb-nav-link">
+                        <i class="fas fa-file-alt"></i> توثيق الخسارة
+                    </a>
+                </li>
+                <li>
+                    <a href="./admin-dashboard.html" class="rb-nav-link rb-active">
+                        <i class="fas fa-cog"></i> الإدارة
+                    </a>
+                </li>
+              
+            
+            </ul>
+        </nav>
+
+        <div class="rb-header-left"></div>
+
+    </div>
+</header>
+
+
+    <main class="dashboard-wrapper">
+
+        <div class="admin-page-title">
+            <h1>لوحة تحكم الإدارة</h1>
+            <p>نظرة عامة على جميع طلبات العائلات وطلبات الدعم</p>
+        </div>
+
+        <div class="stats-cards-grid">
+            <div class="stat-mini-card border-blue">
+                <div class="stat-icon-row">
+                    <div class="stat-icon-bg bg-light-blue"><i class="fas fa-users text-blue"></i></div>
+                </div>
+                <span class="stat-label">إجمالي العائلات</span>
+                <h2 class="stat-number">2,847</h2>
+                <span class="stat-subtext text-blue">+127 هذا الأسبوع</span>
+            </div>
+
+            <div class="stat-mini-card border-orange">
+                <div class="stat-icon-row">
+                    <div class="stat-icon-bg bg-light-orange"><i class="far fa-clock text-orange"></i></div>
+                </div>
+                <span class="stat-label">التقارير المعلقة</span>
+                <h2 class="stat-number">342</h2>
+                <span class="stat-subtext text-red">23 عاجل</span>
+            </div>
+
+            <div class="stat-mini-card border-green">
+                <div class="stat-icon-row">
+                    <div class="stat-icon-bg bg-light-green"><i class="far fa-check-circle text-green"></i></div>
+                </div>
+                <span class="stat-label">المطالبات المتحقق منها</span>
+                <h2 class="stat-number">1,892</h2>
+                <span class="stat-subtext text-green">+56 اليوم</span>
+            </div>
+
+            <div class="stat-mini-card border-purple">
+                <div class="stat-icon-row">
+                    <div class="stat-icon-bg bg-light-purple"><i class="fas fa-file-alt text-purple"></i></div>
+                </div>
+                <span class="stat-label">مهام المنظمات</span>
+                <h2 class="stat-number">128</h2>
+                <span class="stat-subtext text-purple">18 قيد التنفيذ</span>
+            </div>
+        </div>
+
+
+        <div class="admin-table-section">
+            <div class="table-header-controls">
+                <h3 class="table-title">طلبات العائلات</h3>
+                <div class="controls-left-side">
+                    <div class="search-input-wrapper">
+                        <i class="fas fa-search search-table-icon"></i>
+                        <input type="text" placeholder="ابحث عن العائلات...">
+                    </div>
+                    <select class="table-dropdown">
+                        <option>جميع الحالات</option>
+                        <option>متحقق منه</option>
+                        <option>معين</option>
+                        <option>معلق</option>
+                    </select>
+                    <button class="btn-export-data">
+                        تصدير <i class="fas fa-download"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="responsive-table-wrapper">
+                <table class="data-table-main">
+                    <thead>
+                        <tr>
+                            <th>رقم الطلب</th>
+                            <th>اسم العائلة</th>
+                            <th>نوع الخسارة</th>
+                            <th>التاريخ</th>
+                            <th>الحالة</th>
+                            <th>الأولوية</th>
+                            <th>مسؤول الحالة</th>
+                            <th>القيمة</th>
+                            <th>إجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-muted">REQ-2847</td>
+                            <td class="text-dark-bold">عائلة أحمد حسن</td>
+                            <td>عقار سكني</td>
+                            <td>2026-04-28</td>
+                            <td><span class="tbl-badge badge-green-solid">متحقق منه</span></td>
+                            <td><span class="tbl-badge badge-red-solid">عالية</span></td>
+                            <td>سارة حسن</td>
+                            <td class="text-dark-bold">$45,000</td>
+                            <td><button class="btn-table-view"><i class="far fa-eye"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td class="text-muted">REQ-2846</td>
+                            <td class="text-dark-bold">فاطمة القاسم</td>
+                            <td>عمل تجاري</td>
+                            <td>2026-04-28</td>
+                            <td><span class="tbl-badge badge-blue-solid">معين</span></td>
+                            <td><span class="tbl-badge badge-orange-solid">متوسطة</span></td>
+                            <td>عمر خليل</td>
+                            <td class="text-dark-bold">$82,000</td>
+                            <td><button class="btn-table-view"><i class="far fa-eye"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td class="text-muted">REQ-2845</td>
+                            <td class="text-dark-bold">محمد إبراهيم</td>
+                            <td>مركبة</td>
+                            <td>2026-04-27</td>
+                            <td><span class="tbl-badge badge-yellow-solid">معلق</span></td>
+                            <td><span class="tbl-badge badge-gray-solid">منخفضة</span></td>
+                            <td>غير معين</td>
+                            <td class="text-dark-bold">$12,000</td>
+                            <td><button class="btn-table-view"><i class="far fa-eye"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td class="text-muted">REQ-2844</td>
+                            <td class="text-dark-bold">عائلة ليلى منصور</td>
+                            <td>ممتلكات شخصية</td>
+                            <td>2026-04-27</td>
+                            <td><span class="tbl-badge badge-green-solid">متحقق منه</span></td>
+                            <td><span class="tbl-badge badge-orange-solid">متوسطة</span></td>
+                            <td>سارة حسن</td>
+                            <td class="text-dark-bold">$8,500</td>
+                            <td><button class="btn-table-view"><i class="far fa-eye"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td class="text-muted">REQ-2843</td>
+                            <td class="text-dark-bold">يوسف ناصر</td>
+                            <td>عقار سكني</td>
+                            <td>2026-04-26</td>
+                            <td><span class="tbl-badge badge-yellow-solid">معلق</span></td>
+                            <td><span class="tbl-badge badge-red-solid">عالية</span></td>
+                            <td>غير معين</td>
+                            <td class="text-dark-bold">$67,000</td>
+                            <td><button class="btn-table-view"><i class="far fa-eye"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td class="text-muted">REQ-2842</td>
+                            <td class="text-dark-bold">عائلة عائشة رحمن</td>
+                            <td>عمل تجاري</td>
+                            <td>2026-04-26</td>
+                            <td><span class="tbl-badge badge-blue-solid">معين</span></td>
+                            <td><span class="tbl-badge badge-red-solid">عالية</span></td>
+                            <td>عمر خليل</td>
+                            <td class="text-dark-bold">$125,000</td>
+                            <td><button class="btn-table-view"><i class="far fa-eye"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-pagination-footer">
+                <span class="pagination-info">عرض 1 إلى 6 من 342 نتيجة</span>
+                <div class="pagination-buttons">
+                    <button class="btn-page-nav">السابق</button>
+                    <button class="btn-page-num active">1</button>
+                    <button class="btn-page-num">2</button>
+                    <button class="btn-page-num">3</button>
+                    <button class="btn-page-nav">التالي</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="admin-bottom-layout">
+            
+            <div class="bottom-card-side">
+                <div class="white-box-card">
+                    <div class="box-card-header-flex">
+                        <i class="fas fa-exclamation-triangle text-orange"></i>
+                        <h3 class="box-card-title">إجراءات عاجلة مطلوبة</h3>
+                    </div>
+
+                    <div class="urgent-actions-list">
+                        <div class="urgent-action-box bg-light-red">
+                            <div class="urgent-box-left">
+                                <strong>23 تقرير معلق يحتاج مراجعة عاجلة</strong>
+                                <small>مقدم منذ أكثر من 7 أيام</small>
+                            </div>
+                            <span class="urgency-badge red-badge">حرج</span>
+                        </div>
+
+                        <div class="urgent-action-box bg-light-orange">
+                            <div class="urgent-box-left">
+                                <strong>18 مهمة منظمة متأخرة</strong>
+                                <small>تتطلب تنسيقاً فورياً</small>
+                            </div>
+                            <span class="urgency-badge orange-badge">عالية</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-card-side">
+                <div class="white-box-card">
+                    <h3 class="box-card-title">النشاط الأخير</h3>
+                    
+                    <div class="activity-timeline-wrapper">
+                        <div class="activity-item">
+                            <span class="activity-dot dot-green"></span>
+                            <div class="activity-txt">
+                                <strong>تم التحقق من 56 مطالبة جديدة اليوم</strong>
+                                <small>منذ ساعتين</small>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-dot dot-blue"></span>
+                            <div class="activity-txt">
+                                <strong>تعيين 12 عائلة لمسؤولي الحالات</strong>
+                                <small>منذ 4 ساعات</small>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-dot dot-purple"></span>
+                            <div class="activity-txt">
+                                <strong>تلقي 3 طلبات شراكة من منظمات</strong>
+                                <small>منذ 6 ساعات</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> 
+    </main>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إعادة البناء - وثق خسارتك</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/form-style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../Css/header.css">
+</head>
+<body>
+
+ <header class="rb-main-header">
+    <div class="rb-header-container">
+        <a href="index.html" class="rb-logo-wrapper">
+             <div class="rb-logo-icon"><i class="fas fa-home"></i></div>
+            <span class="rb-logo-text">إعادة البناء</span>
+        </a>
+        <button class="rb-menu-toggle" id="rbMenuToggle" aria-label="قائمة التنقل">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="rb-overlay" id="rbOverlay"></div>
+
+        <nav class="rb-nav-box" id="rbNavBox">
+            <ul class="rb-nav-list">
+                <li><a href="../html pages/dashboard.html" class="rb-nav-link "><i class="fas fa-th-large"></i> لوحة التحكم</a></li>
+                <li><a href="./document-loss.html" class="rb-nav-link rb-active"><i class="fas fa-file-alt"></i> توثيق الخسارة</a></li>
+                <li><a href="./admin-dashboard.html" class="rb-nav-link"><i class="fas fa-cog"></i> الإدارة</a></li>
+            </ul>
+        </nav>
+        <div class="rb-header-left"></div>
+    </div>
+</header>
+
+<main class="dashboard-wrapper">
+    <div class="back-link">
+        <a href="../html pages/dashboard.html"> <i class="fas fa-arrow-right"></i> العودة إلى لوحة التحكم </a>
+    </div>
+
+    <div class="form-header">
+        <h1>وثق خسارتك</h1>
+        <p>يرجى تقديم معلومات دقيقة جميع البيانات يتم تخزينها بشكل آمن وسيتم التحقق منها من قبل فريقنا.</p>
+    </div>
+
+    <div class="main-form-card">
+        <div class="stepper-container" id="stepper">
+            <div class="step active" data-step="1">
+                <div class="step-number">1</div>
+                <div class="step-label">المعلومات الشخصية<span>بيانات الاتصال</span></div>
+            </div>
+            <div class="step-line"></div>
+            <div class="step" data-step="2">
+                <div class="step-number">2</div>
+                <div class="step-label">نوع الخسارة<span>ما تأثر</span></div>
+            </div>
+            <div class="step-line"></div>
+            <div class="step" data-step="3">
+                <div class="step-number">3</div>
+                <div class="step-label">تفاصيل الممتلكات<span>الوصف والصور</span></div>
+            </div>
+            <div class="step-line"></div>
+            <div class="step" data-step="4">
+                <div class="step-number">4</div>
+                <div class="step-label">الموقع<span>موقع الخريطة</span></div>
+            </div>
+        </div>
+        
+        <div class="form-step active" id="step-1">
+            <h3 class="section-title">المعلومات الشخصية</h3>
+            <div class="input-group">
+                <label>الاسم الكامل *</label>
+                <input type="text" id="form-fullname" placeholder="أدخل اسمك الكامل">
+            </div>
+            <div class="input-row">
+                <div class="input-group">
+                    <label>البريد الإلكتروني *</label>
+                    <input type="email" id="form-email" placeholder="your.email@example.com">
+                </div>
+                <div class="input-group">
+                    <label>رقم الهاتف *</label>
+                    <input type="text" id="form-phone" placeholder="+970 XX XXX XXXX">
+                </div>
+            </div>
+            <div class="input-group">
+                <label>حجم العائلة *</label>
+                <input type="number" id="form-familysize" placeholder="عدد أفراد العائلة">
+            </div>
+            <div class="privacy-box">
+                <p><strong>إشعار الخصوصية:</strong> معلوماتك الشخصية مشفرة ومخزنة بشكل آمن، سيتم استخدامها فقط للتحقق وخدمات الدعم.</p>
+            </div>
+        </div>
+
+        <div class="form-step" id="step-2">
+            <h3 class="section-title">نوع الخسارة</h3>
+            <p class="section-sub">اختر الفئة التي تصف خسارتك بشكل أفضل. يمكنك تقديم تقارير متعددة لأنواع مختلفة</p>
+            <div class="selection-grid">
+                <div class="selection-card active" onclick="selectCard(this)">
+                     <div class="selection-icon blue-sq"><i class="fas fa-home"></i></div>
+                    <span class="selection-text">عقار سكني</span>
+                </div>
+                <div class="selection-card" onclick="selectCard(this)">
+                    <div class="selection-icon green-sq"><i class="fas fa-car"></i></div>
+                    <span class="selection-text">مركبة</span>
+                </div>
+                <div class="selection-card" onclick="selectCard(this)">
+                    <div class="selection-icon purple-sq"><i class="fas fa-building"></i></div>
+                    <span class="selection-text">عمل تجاري</span>
+                </div>
+                <div class="selection-card" onclick="selectCard(this)">
+                    <div class="selection-icon orange-sq"><i class="fas fa-briefcase"></i></div>
+                    <span class="selection-text">ممتلكات شخصية</span>
+                </div>
+                <div class="selection-card" onclick="selectCard(this)">
+                    <div class="selection-icon pink-sq"><i class="fas fa-heart"></i></div>
+                    <span class="selection-text">فرد من العائلة</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-step" id="step-3">
+            <h3 class="section-title">وصف الممتلكات</h3>
+            <div class="input-group">
+                <label>وصف تفصيلي *</label>
+                <textarea id="form-description" rows="4" placeholder="قدم أكبر قدر ممكن من التفاصيل؛ ماذا فقد؟ متى حدث ذلك؟ ما هي الحالة قبل الخسارة؟..."></textarea>
+                <small class="upload-footer-note">كلما قدمت تفاصيل أكثر، كان بإمكاننا التحقق ومعالجة مطالبتك بشكل أسرع.</small>
+            </div>
+            <div class="input-group">
+                <label>القيمة التقديرية (دولار)</label>
+                <input type="number" id="form-amount" placeholder="0.00" class="small-input">
+            </div>
+            <div class="upload-wrapper">
+                <label class="label-title">تحميل الصور / المستندات</label>
+                <input type="file" id="actual-file-input" hidden multiple accept="image/*,.pdf">
+                <div class="upload-zone-box" onclick="document.getElementById('actual-file-input').click()">
+                    <div class="upload-icon-circle"><i class="fas fa-cloud-upload-alt"></i></div>
+                    <p class="upload-text"><span class="blue-text-link">انقر للتحميل</span> أو اسحب وأفلت</p>
+                    <span class="upload-specs">PNG, JPG, PDF حتى 10 ميجابايت لكل ملف (بحد أقصى 5 ملفات)</span>
+                </div>
+                <p class="upload-footer-note">Photos help verify your claim. Include before/after pictures if possible.</p>
+            </div>
+        </div>
+
+        <div class="form-step" id="step-4">
+            <h3 class="section-title">معلومات الموقع</h3>
+            <div class="location-details-group">
+                <div class="input-field-wrapper">
+                    <label>المدينة *</label>
+                    <input type="text" id="city-input" placeholder="مثال: غزة، خان يونس..." class="custom-location-input">
+                </div>
+                <div class="input-group">
+                    <label>عنوان الشارع * </label>
+                    <input type="text" id="street-address" placeholder="أدخل عنوان الشارع أو الموقع">
+                </div>
+                <div class="input-field-wrapper">
+                    <label>الحي / المنطقة *</label>
+                    <input type="text" id="district-input" placeholder="مثال: الرمال، الشيخ رضوان..." class="custom-location-input">
+                </div>
+                <div class="input-field-wrapper">
+                    <label>رقم البناية (إن وجد)</label>
+                    <input type="text" id="building-input" placeholder="مثال: بناية رقم 12، بجانب مسجد..." class="custom-location-input">
+                </div>
+            </div>
+            <div class="map-box">
+                <div class="map-icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+                <h4>خريطة تفاعلية</h4>
+                <p>انقر على الخريطة لتحديد الموقع الدقيق لخسارتك</p>
+                <button type="button" class="btn-location" onclick="getRealLocation()">استخدم الموقع الحالي</button>
+            </div>
+            <div class="input-row">
+                <div class="input-group">
+                    <label>خط العرض</label>
+                    <input type="text" id="lat-input" value="31.5000" readonly>
+                </div>
+                <div class="input-group">
+                    <label>خط الطول</label>
+                    <input type="text" id="lng-input" value="34.5000" readonly>
+                </div>
+            </div>
+            <div class="ready-banner">
+                <i class="fas fa-check-circle"></i>
+                <p>جاهز للإرسال: يرجى مراجعة جميع المعلومات قبل الإرسال. بمجرد الإرسال، ستتم مراجعة توثيقك خلال 3-5 أيام عمل.</p>
+            </div>
+        </div>
+
+        <div class="form-footer">
+            <button class="btn-next-action" id="nextBtn" onclick="changeStep(1)">التالي <i class="fas fa-arrow-left"></i></button>
+            <button class="btn-back-link" id="prevBtn" onclick="changeStep(-1)"> <i class="fas fa-arrow-right"></i> السابق</button>
+        </div>
+    </div>
+</main>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

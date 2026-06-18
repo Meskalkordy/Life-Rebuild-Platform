@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة إعلانات المجتمع - إعادة البناء</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../Css/community.css">
+    <link rel="stylesheet" href="../Css/header.css">
+</head>
+<body>
+
+ <header class="rb-main-header">
+    <div class="rb-header-container">
+        
+        <a href="index.html" class="rb-logo-wrapper">
+             <div class="rb-logo-icon">
+                <i class="fas fa-home"></i> </div>
+            <span class="rb-logo-text">إعادة البناء</span>
+           
+        </a>
+        <button class="rb-menu-toggle" id="rbMenuToggle" aria-label="قائمة التنقل">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="rb-overlay" id="rbOverlay"></div>
+
+        <nav class="rb-nav-box" id="rbNavBox">
+            <ul class="rb-nav-list">
+                    <li>
+                    <a href="../html pages/dashboard.html" class="rb-nav-link rb-active">
+                        <i class="fas fa-th-large"></i> لوحة التحكم
+                    </a>
+                </li>
+                  <li>
+                    <a href="./document-loss.html" class="rb-nav-link">
+                        <i class="fas fa-file-alt"></i> توثيق الخسارة
+                    </a>
+                </li>
+                <li>
+                    <a href="./admin-dashboard.html" class="rb-nav-link">
+                        <i class="fas fa-cog"></i> الإدارة
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="rb-header-left"></div>
+
+    </div>
+</header>
+
+
+    <div class="community-hero-banner">
+        <div class="hero-bell-icon">
+            <i class="far fa-bell"></i>
+        </div>
+        <h1>لوحة إعلانات المجتمع</h1>
+        <p>تواصل مع جيرانك، شارك الموارد، وابقَ على اطلاع بتحديثات الحي.</p>
+    </div>
+
+    <div class="dashboard-wrapper">
+
+        <div class="search-filter-section">
+            <div class="search-bar-row">
+                <input type="text" placeholder="البحث في الإعلانات...">
+                <button class="btn-search">بحث</button>
+            </div>
+            
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">الكل (6)</button>
+                <button class="filter-btn" data-filter="red">تنبيهات أمنية (2)</button>
+                <button class="filter-btn" data-filter="green">موارد مشتركة (2)</button>
+                <button class="filter-btn" data-filter="community">مجتمعي (1)</button>
+                <button class="filter-btn" data-filter="updates">تحديثات (1)</button>
+            </div>
+        </div>
+
+        <div class="create-post-card">
+            <div class="post-card-title">
+                <i class="far fa-heart heart-green"></i>
+                <span>شارك مع مجتمعك</span>
+            </div>
+            <textarea placeholder="شارك تحديثاً، مورداً، أو تنبيهاً مع جيرانك..."></textarea>
+            <div class="post-footer-actions">
+                <button class="btn-location-trigger">
+                    <i class="fas fa-map-marker-alt"></i> موقعك
+                </button>
+                <button class="btn-submit-post">نشر</button>
+            </div>
+        </div>
+
+        <div class="section-divider-title">
+            <i class="fas fa-thumbtack"></i> إعلانات مثبتة
+        </div>
+
+        <div class="announcements-feed">
+            
+            <div class="announcement-card border-red red">
+                <div class="card-user-header">
+                    <div class="user-meta-side">
+                        <div class="user-avatar avatar-red">إد</div>
+                        <div class="user-info-text">
+                            <h4>إدارة الحي - الرمال <i class="fas fa-thumbtack pin-ico"></i></h4>
+                            <span><i class="far fa-clock"></i> منذ 30 دقيقة</span>
+                        </div>
+                    </div>
+                    <div class="card-badge-type text-red">
+                        <i class="fas fa-thumbtack"></i>
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                </div>
+                <div class="card-body-content">
+                    <h5>تنبيه أمني: طريق الجلاء</h5>
+                    <p>يرجى تجنب استخدام طريق الجلاء اليوم بين الساعة 4-8 مساءً بسبب أعمال إصلاح عاجلة. الطرق البديلة متاحة عبر شارع النصر.</p>
+                </div>
+                <div class="card-action-footer">
+                    <button class="action-btn"><i class="far fa-thumbs-up"></i> 45</button>
+                    <button class="action-btn"><i class="far fa-comment"></i> 17</button>
+                    <button class="action-btn"><i class="far fa-share-square"></i> 8</button>
+                </div>
+            </div>
+
+            <div class="announcement-card border-red red">
+                <div class="card-user-header">
+                    <div class="user-meta-side">
+                        <div class="user-avatar avatar-red">دم</div>
+                        <div class="user-info-text">
+                            <h4>الدفاع المدني <i class="fas fa-thumbtack pin-ico"></i></h4>
+                            <span><i class="far fa-clock"></i> منذ 7 ساعات</span>
+                        </div>
+                    </div>
+                    <div class="card-badge-type text-red">
+                        <i class="fas fa-thumbtack"></i>
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                </div>
+                <div class="card-body-content">
+                    <h5>تحذير مبنى غير آمن - شارع عمر المختار</h5>
+                    <p>نود تنويه المواطنين بالابتعاد عن محيط المبنى المتضرر في شارع عمر المختار لحين انتهاء أعمال التدعيم وإزالة الأنقاض الخطرة. شكراً لتعاونكم.</p>
+                </div>
+                <div class="card-action-footer">
+                    <button class="action-btn"><i class="far fa-thumbs-up"></i> 67</button>
+                    <button class="action-btn"><i class="far fa-comment"></i> 19</button>
+                    <button class="action-btn"><i class="far fa-share-square"></i> 34</button>
+                </div>
+            </div>
+
+            <div class="announcement-card border-green green">
+                <div class="card-user-header">
+                    <div class="user-meta-side">
+                        <div class="user-avatar avatar-green">مت</div>
+                        <div class="user-info-text">
+                            <h4>مركز التوزيع - حي الشجاعية</h4>
+                            <span><i class="far fa-clock"></i> منذ ساعتين</span>
+                        </div>
+                    </div>
+                    <div class="card-badge-type text-green"><i class="fas fa-box-open" style="color: #10b981;"></i></div>
+                </div>
+                <div class="card-body-content">
+                    <h5>توزيع مساعدات غذائية - غداً</h5>
+                    <p>سيتم توزيع طروض غذائية للعائلات المسجلة غداً من الساعة 9 صباحاً حتى 3 مساءً في مقر مدرسة الأمل الابتدائية.</p>
+                    <div class="location-tag-info">
+                        <i class="fas fa-map-marker-alt"></i> مدرسة الأمل الابتدائية
+                    </div>
+                </div>
+                <div class="card-action-footer">
+                    <button class="action-btn"><i class="far fa-thumbs-up"></i> 128</button>
+                    <button class="action-btn"><i class="far fa-comment"></i> 34</button>
+                    <button class="action-btn"><i class="far fa-share-square"></i> 56</button>
+                </div>
+            </div>
+
+            <div class="announcement-card border-blue community">
+                <div class="card-user-header">
+                    <div class="user-meta-side">
+                        <div class="user-avatar avatar-blue">مي</div>
+                        <div class="user-info-text">
+                            <h4>محمد يوسف</h4>
+                            <span><i class="far fa-clock"></i> منذ 3 ساعات</span>
+                        </div>
+                    </div>
+                    <div class="card-badge-type text-blue"><i class="far fa-heart"></i></div>
+                </div>
+                <div class="card-body-content">
+                    <h5>تنظيف حي الرمال - يوم السبت</h5>
+                    <p>ندعو جميع سكان الحي للمشاركة في حملة تنظيف تطوعية يوم السبت الساعة 7 صباحاً. معاً نعيد بناء حينا. من يرغب بالمشاركة يرجى التسجيل.</p>
+                </div>
+                <div class="card-action-footer">
+                    <button class="action-btn"><i class="far fa-thumbs-up"></i> 89</button>
+                    <button class="action-btn"><i class="far fa-comment"></i> 23</button>
+                    <button class="action-btn"><i class="far fa-share-square"></i> 15</button>
+                </div>
+            </div>
+
+            <div class="announcement-card border-blue updates">
+                <div class="card-user-header">
+                    <div class="user-meta-side">
+                        <div class="user-avatar avatar-blue">بغ</div>
+                        <div class="user-info-text">
+                            <h4>بلدية غزة</h4>
+                            <span><i class="far fa-clock"></i> منذ 5 ساعات</span>
+                        </div>
+                    </div>
+                    <div class="card-badge-type text-blue"><i class="far fa-bell" style="color: #3b82f6;"></i></div>
+                </div>
+                <div class="card-body-content">
+                    <h5>استعادة إمدادات المياه - حي النصر</h5>
+                    <p>تم استعادة إمدادات المياه بنجاح في حي النصر. جدول التوزيع: 6 صباحاً - 12 ظهراً، و6 مساءً - 10 مساءً يومياً حتى إشعار آخر.</p>
+                </div>
+                <div class="card-action-footer">
+                    <button class="action-btn"><i class="far fa-thumbs-up"></i> 234</button>
+                    <button class="action-btn"><i class="far fa-comment"></i> 45</button>
+                    <button class="action-btn"><i class="far fa-share-square"></i> 89</button>
+                </div>
+            </div>
+
+            <div class="announcement-card border-green green">
+                <div class="card-user-header">
+                    <div class="user-meta-side">
+                        <div class="user-avatar avatar-green">عم</div>
+                        <div class="user-info-text">
+                            <h4>عائشة محمود</h4>
+                            <span><i class="far fa-clock"></i> منذ يوم واحد</span>
+                        </div>
+                    </div>
+                    <div class="card-badge-type text-green"><i class="fas fa-box-open" style="color: #10b981;"></i></div>
+                </div>
+                <div class="card-body-content">
+                    <h5>مشاركة موارد: أدوات إصلاح منزلية</h5>
+                    <p>لدي مجموعة من أدوات الإصلاح المنزلية (شاكوش، مفكات، كماشة) متاحة للإعارة لمن يحتاجها، يمكنكم التواصل معي على 059-111-2222.</p>
+                </div>
+                <div class="card-action-footer">
+                    <button class="action-btn"><i class="far fa-thumbs-up"></i> 42</button>
+                    <button class="action-btn"><i class="far fa-comment"></i> 18</button>
+                    <button class="action-btn"><i class="far fa-share-square"></i> 9</button>
+                </div>
+            </div>
+
+        </div> 
+    </div> 
+    <script src="../js/main.js"></script>
+</body>
+</html>

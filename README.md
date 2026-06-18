@@ -1,0 +1,94 @@
+# <p align="center">🌟 Life-Rebuild (العودة للحياة) 🌟</p>
+<p align="center">
+  <strong>A Human-Centered Smart Platform Supporting Displaced Families in Post-Conflict Recovery</strong><br>
+  <sub>Islamic University of Gaza • Department of Computer Engineering • Graduation Project 2025/2026</sub>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Maintained%3F-Yes-emerald?style=for-the-badge" alt="Maintained">
+  <img src="https://img.shields.io/badge/Platform-Web%20%7C%20Mobile--First-blue?style=for-the-badge" alt="Platform">
+  <img src="https://img.shields.io/badge/Academic-Graduation%20Project-purple?style=for-the-badge" alt="Academic">
+</p>
+
+---
+
+## 📖 Overview | نبذة عن النظام
+**Life-Rebuild** هو منصة رقمية ذكية صُممت خصيصاً من قلب المعاناة في قطاع غزة، لتمكين العائلات النازحة والمتضررة من تنظيم وإعادة بناء حياتهم بعد الحروب والنزوح القسري. يوفر النظام بيئة مركزية آمنة تدمج بين الجوانب الإدارية والقانونية، المساعدات الإنسانية، والدعم النفسي من خلال أتمتة الإجراءات وتسهيل الوصول للموارد الحيوية.
+
+---
+
+## ✨ System Architecture & Key Features | ميزات المنصة
+تم تصميم المنصة بالاعتماد على دراسة ميدانية شملت 100 مشارك متضرر لضمان تلبية الاحتياجات الحقيقية:
+
+* **📂 Lost Document Management:** نظام سحابي آمن لتوثيق وحفظ نسخ رقمية من الأوراق الثبوتية المفقودة (هويات، شهادات، ملكيات أراضي).
+* **🏠 Asset & Loss Tracking:** أداة مرنة لحصر وتقرير الأضرار والممتلكات المفقودة لتسهيل تقديمها للجهات المعنية.
+* **🗺️ Personalized Recovery Roadmap:** توليد خطة تعافي مخصصة لكل عائلة خطوة بخطوة بناءً على احتياجاتها (سكن، تعليم، قانون).
+* **🤝 NGO Integration Workflow:** نظام ربط ذكي يمنع تكرار تقديم المساعدات ويصل العائلات بالمنظمات الدولية (UNRWA, UNHCR) بكفاءة.
+* **🧠 Psychosocial Support Hub:** مساحة مخصصة للدعم النفسي الرقمي، والموارد الإرشادية لتعزيز الصمود والتغلب على الصدمات.
+
+---
+
+## 🛠️ Tech Stack | التقنيات المستخدمة
+
+<table>
+  <tr>
+    <td><strong>Frontend (الواجهات)</strong></td>
+    <td>HTML5, CSS3, JavaScript (ES6+), Mobile-First Responsive Grid</td>
+  </tr>
+  <tr>
+    <td><strong>Backend (السيرفر)</strong></td>
+    <td>Node.js, Express.js (RESTful APIs Blueprint)</td>
+  </tr>
+  <tr>
+    <td><strong>Database (البيانات)</strong></td>
+    <td>MySQL Server (Relational Schema Design)</td>
+  </tr>
+  <tr>
+    <td><strong>Security (الأمان)</strong></td>
+    <td>JWT (JSON Web Tokens) Session Security, HTTPS, Password Hashing</td>
+  </tr>
+  <tr>
+    <td><strong>UI/UX Design</strong></td>
+    <td>Adobe XD (Wireframes, User Flows & Interactive Prototypes)</td>
+  </tr>
+</table>
+
+---
+
+## 📂 Project Directory Structure | هيكلية الملفات
+
+```text
+Life-Rebuild/
+│
+├── frontend/               # واجهات المستخدم والـ Client-side (شغل مسك)
+│   ├── css/                # ملفات التنسيق والـ Grid Responsive
+│   ├── js/                 # الـ Logic الداخلي وربط الـ Fetch APIs
+│   ├── assets/             # الأيقونات والملفات المرئية والشعارات
+│   └── index.html          # لوحة التحكم الرئيسية للمنصة
+│
+├── backend/                # السيرفر والـ Server-side (شغل روان)
+│   ├── config/             # إعدادات الاتصال بقاعدة البيانات (Database Connections)
+│   ├── controllers/        # منطق المعالجة (Auth, Request Approval Logic)
+│   ├── models/             # هيكلة الجداول (User, LossDocument, AidRequest Models)
+│   ├── routes/             # مسارات الـ REST API (Endpoints)
+│   └── server.js           # الملف الأساسي لتشغيل السيرفر
+│
+├── ui-ux/                  # ملفات التصميم والتحليل (شغل هديل)
+│   ├── wireframes/         # مخططات واجهة المستخدم
+│   └── design_links.txt    # روابط مشروع الـ Adobe XD والـ Prototypes
+│
+└── 
+---
+
+## 👥 فريق العمل | The Development Team
+
+| الاسم (Name) | الدور البرمجي (Core Role) |
+| :--- | :--- |
+| 🎓 **مسك زهير الكردي** | Front-End Developer & UI Engineer |
+| 🎓 **روان خالد سالم** | Back-End Developer & Database Architect |
+| 🎓 **هديل رفعت رجب** | UI/UX Designer & Requirements Analyst |
+
+<br>
+
+### 👨‍🏫 تحت إشراف الدكتور الفاضل:
+**أ.د. أحمد أبو دبوسة (Dr. Ahmad Abu Dabbusa)**

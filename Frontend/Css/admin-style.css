@@ -1,0 +1,598 @@
+/* هان عرفنا متغيرات الألوان    */
+:root {
+    --primary-blue: #3b82f6;
+    --primary-purple: #a855f7;
+    --card-green: #22c55e;
+    --card-orange: #f59e0b;
+    --card-red: #ef4444;
+    --bg-light: #f8fafc;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --white: #ffffff;
+    --container-width: 900px;
+    --border-light: #f1f5f9;
+}
+/* تصفير المسافات*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* تجهيز خلفية الصفحة ونوع الخط  و القراءة من اليمين لليسار (يعني عربي) */
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    direction: rtl;
+}
+/* المربع الكبير اللي لامة كل حاجة في الصفحة ومحطوط بالنص */
+.dashboard-wrapper {
+    max-width: 1500px;
+    margin: 0 auto 50px auto;
+    padding: 0 25px;
+}
+/* تنسيق عنوان الصفحة والوصف  اللي تحته */
+.admin-page-title {
+    margin-bottom: 30px;
+}
+
+.admin-page-title h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 5px;
+}
+
+.admin-page-title p {
+    font-size: 14px;
+    color: #64748b;
+}
+/*   : تصف الصناديق جنب بعض وبتنزل سطر تلقائي لو فتحت على الموبايل */
+.stats-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    padding: 10px 0;
+}
+/* الشكل الموحد للصناديق الأربعة ويتكون الخلفية بيضة و الحواف دائرية والظل خفيف) */
+.stat-mini-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: flex-start;
+    min-height: 180px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+/* تأثير بسيط برفع الصندوق لفوق شوي ويعطيه ظل لما احط الماوس عليه */
+.stat-mini-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.stat-icon-row {
+    margin-bottom: 16px; 
+    align-self: flex-start; 
+}
+/* الدائرة أو المربع الصغير الي لافف الايقونة جوا الصندوق */
+.stat-icon-bg {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+/* النص الموجود في الصندوق وهو العنوان، الرقم الكبير، والنص  الصغير */
+.stat-label {
+    font-size: 14px;
+    color: #64748b;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.stat-number {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 6px 0;
+    line-height: 1;
+}
+
+.stat-subtext {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: auto; 
+}
+/* الألوان الخاصة بالصندوق الأزرق */
+.stat-mini-card.border-blue {
+    border: 1px solid #2564eb73;
+}
+.stat-mini-card.border-blue .stat-icon-bg {
+    background-color: #eff6ff;
+}
+.text-blue { color: #64748b !important; }
+/* الألوان الخاصة بالصندوق البرتقالي */
+.stat-mini-card.border-orange {
+    border: 1px solid #d9770680 ;
+}
+.stat-mini-card.border-orange .stat-icon-bg {
+    background-color: #fffbeb;
+}
+.text-orange { color: #d97706 !important; }
+.text-red { color: #64748b !important; }
+/* الألوان الخاصة بالصندوق الأخضر */
+.stat-mini-card.border-green {
+    border: 1px solid #16a34a7e;
+}
+.stat-mini-card.border-green .stat-icon-bg {
+    background-color: #f0fdf4;
+}
+.text-green { color: #64748b !important; }
+/* الألوان الخاصة بالصندوق البنفسجي */
+.stat-mini-card.border-purple {
+    border: 1px solid #9333ea;
+}
+.stat-mini-card.border-purple .stat-icon-bg {
+    background-color: #faf5ff;
+}
+.text-purple { color: #64748b !important; }
+/* تنسيق الصندوق الأبيض الكبير اللي محطوط فيه الجدول  */
+.admin-table-section {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+/* عمل العناصر على سطر واحد*/
+.table-header-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.table-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.controls-left-side {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+/* تصميم مربع البحث */
+.search-input-wrapper {
+    position: relative;
+}
+
+.search-input-wrapper input {
+    padding: 10px 16px 10px 40px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 14px;
+    width: 240px;
+    background-color: #f8fafc;
+    color: #334155;
+    outline: none;
+    transition: border-color 0.2s;
+}
+/* تغيير لون حواف مربع البحث لما اضغط جواته عشان يوضح للمستخدم إنه بكتب فيه */
+.search-input-wrapper input:focus {
+    border-color: #3b82f6;
+}
+/* ضبط العدسة داخل المربع */
+.search-table-icon {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    font-size: 14px;
+}
+/* تصميم قائمة الاختيارات  */
+.table-dropdown {
+    padding: 10px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #334155;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+/* تصميم زر التصدير الازرق  */
+.btn-export-data {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-export-data:hover {
+    background-color: #2563eb;
+}
+/* منع الجدول من الخروج عن الشاشة في الموبايل */
+.responsive-table-wrapper {
+    overflow-x: auto;
+    border: 1px solid #f1f5f9;
+    border-radius: 12px;
+}
+/* ستايل الجدول والمسافات بين الكلام    */
+.data-table-main {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: right;
+    font-size: 14px;
+}
+
+.data-table-main thead tr {
+    background-color: #f8fafc;
+}
+
+.data-table-main th {
+    padding: 16px;
+    color: #64748b;
+    font-weight: 600;
+    font-size: 13px;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.data-table-main td {
+    padding: 16px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #475569;
+}
+
+.data-table-main tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.text-muted {
+    color: #94a3b8 !important;
+}
+
+.text-dark-bold {
+    color: #1e293b;
+    font-weight: 700;
+}
+/* الاشارات الملونة اللي بتعرض حالة الطلب في الجدول */
+.tbl-badge {
+    padding: 6px 14px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+    text-align: center;
+}
+/* ألوان الاشارات للحالات  أخضر للمتحقق، برتقالي للمتوسط*/
+.badge-green-solid {
+    background-color: #e6fcf5;
+    color: #0ca678;
+}
+
+.badge-blue-solid {
+    background-color: #e7f5ff;
+    color: #1c7ed6;
+}
+
+.badge-yellow-solid {
+    background-color: #fff9db;
+    color: #f59f00;
+}
+
+.badge-red-solid {
+    background-color: #fff5f5;
+    color: #f03e3e;
+}
+
+.badge-orange-solid {
+    background-color: #fff4e6;
+    color: #f76707;
+}
+
+.badge-gray-solid {
+    background-color: #f1f3f5;
+    color: #868e96;
+}
+/* زر العين الموجود بآخر كل سطر بالجدول  */
+.btn-table-view {
+    background: none;
+    border: none;
+    color: #3b82f6;
+    font-size: 16px;
+    transition: transform 0.15s;
+}
+/* تكبير  للزر عند وضع الماوس عليه*/
+.btn-table-view:hover {
+    transform: scale(1.15);
+}
+
+.table-pagination-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.pagination-info {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.pagination-buttons {
+    display: flex;
+    gap: 8px;
+}
+/* تصميم أزرار الصفحات 1، 2، 3 والأسهم) */
+.btn-page-nav, .btn-page-num {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #475569;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.15s;
+}
+
+.btn-page-nav:hover, .btn-page-num:hover {
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+}
+/* زر الصفحة اللي ضاغط عليها المستخدم تضوي أزرق */
+.btn-page-num.active {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border-color: #3b82f6;
+}
+/* توزيع الصندوقين اللي تحت في آخر الصفحة وخلاهم جنب بعض    */
+.admin-bottom-layout {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.bottom-card-side {
+    flex: 1; 
+    display: flex;
+}
+/* تصميم الصندوق الأبيض الي موجود فيه قسم الإشعارات والإجراءات */
+.white-box-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.01), 0 1px 2px rgba(0, 0, 0, 0.03); 
+    width: 100%;
+}
+
+.box-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+/* ترتيب قائمة الأنشطة الأخيرة على شكل خط  */
+.activity-timeline-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+/* تصميم النقاط الدائرية  الملونة جنب كل إشعار */
+.activity-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-top: 6px; 
+    flex-shrink: 0;
+}
+
+.dot-green { background-color: #16a34a; } 
+.dot-blue { background-color: #3b82f6; }
+.dot-purple { background-color: #9333ea; } 
+
+.activity-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.activity-txt strong {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #1e293b;
+    line-height: 1.4;
+}
+
+.activity-txt small {
+    font-size: 11px;
+    font-weight: 600;
+    color: #cbd5e1;
+}
+
+.box-card-header-flex {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.box-card-header-flex .text-orange {
+    font-size: 16px;
+    color: #f59f00; 
+}
+/* قائمة التنبيهات  */
+.urgent-actions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+/* المربع الملون  اللي موحود فيه التنبيه  */
+.urgent-action-box {
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.bg-light-red {
+    background-color: #fff5f5; 
+}
+
+.bg-light-orange {
+    background-color: #fffbeb; 
+}
+
+.urgent-box-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.urgent-box-left strong {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.urgent-box-left small {
+    font-size: 11px;
+    font-weight: 600;
+    color: #64748b; 
+}
+
+.urgency-badge {
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.red-badge {
+    background-color: #fee2e2;
+    color: #ef4444;           
+}
+
+.orange-badge {
+    background-color: #fef3c7;
+    color: #f97316;           
+}
+/* لما تنزل الشاشة لحجم التابلت أو اللاب توب الصغير العناصر بتصير فوق بعض عشان ما تطلع من الشاشة */
+@media (max-width: 992px) {
+    .dashboard-wrapper {
+        padding: 0 16px;
+        margin-bottom: 30px;
+    }
+
+    .admin-page-title {
+        margin-bottom: 20px;
+    }
+    
+    .admin-page-title h1 {
+        font-size: 20px !important;
+    }
+
+    .table-header-controls {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 16px;
+    }
+
+    .controls-left-side {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch !important;
+        gap: 12px;
+    }
+
+    .search-input-wrapper input {
+        width: 100% !important;
+    }
+
+    .table-dropdown, .btn-export-data {
+        width: 100%;
+        justify-content: center; 
+    }
+
+    .admin-bottom-layout {
+        flex-direction: column !important;
+        gap: 20px;
+    }
+
+    .bottom-card-side {
+        width: 100%;
+    }
+    
+    .white-box-card {
+        padding: 16px !important;
+    }
+}
+/* لما افتح الصفحة من جوال صغير  بنصغر الخطوط وبنخلي الصناديق بالطول بدل العرض */
+@media (max-width: 576px) {
+    .stats-cards-grid {
+        grid-template-columns: 1fr !important; 
+        gap: 16px;
+    }
+
+    .stat-mini-card {
+        min-height: auto;
+        padding: 16px !important;
+    }
+
+    .stat-number {
+        font-size: 24px !important;
+    }
+
+    .urgent-action-box {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 12px;
+        padding: 12px !important;
+    }
+
+    .urgency-badge {
+        align-self: flex-end; 
+    }
+
+    .table-pagination-footer {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .pagination-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .btn-page-nav, .btn-page-num {
+        padding: 6px 12px !important;
+        font-size: 12px !important;
+    }
+}

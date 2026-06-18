@@ -1,0 +1,460 @@
+:root {
+    --primary-blue: #3b82f6;
+    --card-pink: #ed217c;
+    --card-green: #00b67a;
+    --bg-light: #f8fafc;
+    --white: #ffffff;
+    --container-width: 900px;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    direction: rtl;
+    font-size: 14px; 
+}
+
+.main-header {
+    background-color: var(--white);
+    width: 100%;
+    border-bottom: 1px solid #f1f5f9;
+    padding: 8px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-full-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 25px;
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon-box-header {
+    background-color: var(--primary-blue);
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.link-item {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 13.5px; 
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.active-page {
+    background-color: #eff6ff;
+    color: var(--primary-blue);
+    padding: 8px 16px;
+    border-radius: 10px;
+}
+
+.roadmap-hero {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%); 
+    color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.roadmap-hero .hero-icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 60px;  
+    height: 60px; 
+    border-radius: 50%;
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.pin-svg {
+    width: 30px;  
+    height: 30px;
+    color: #ffffff;
+    stroke-width: 1.8;
+}
+
+.roadmap-hero h1 {
+    font-size: 30px; 
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.roadmap-hero p {
+    font-size: 16px; 
+    opacity: 0.95;
+}
+
+.roadmap-wrapper { 
+    max-width: 1200px; 
+    margin: 40px auto 40px; 
+    padding: 0 20px; 
+}
+
+.progress-main-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 22px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    border: 1px solid #f1f5f9;
+}
+
+.progress-top-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.family-header h3 { 
+    font-size: 22px; 
+    color: #1e293b; 
+    margin-bottom: 4px; 
+}
+
+.family-header p { 
+    font-size: 14px; 
+    color: #64748b; 
+}
+
+.percentage-display { text-align: left; }
+.pct-number { 
+    font-size: 26px; 
+    font-weight: 800; 
+    color: #10b981; 
+    display: block; 
+}
+.pct-label { font-size: 12px; color: #94a3b8; }
+
+.progress-track {
+    height: 10px;
+    background: #f1f5f9;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #10b981;
+    border-radius: 10px;
+}
+
+.status-summary-nodes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 15px;
+}
+
+.node-item { text-align: center; }
+.node-count, .node-count1 { font-size: 16px; font-weight: 800; display: block; color: #10b981; }
+.node-count1 { color: #94a3b8; }
+.node-label { font-size: 13px; color: #94a3b8; }
+.active-node .node-count { color: #f59e0b; } 
+.node-separator { width: 1px; height: 30px; background: #f1f5f9; }
+
+.services-status-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.service-status-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid #f1f5f9;
+    text-align: right;
+}
+
+.security-card { border: 2px solid rgba(16, 185, 129, 0.2); } 
+.electricity-card { border: 2px solid rgba(245, 158, 11, 0.2); } 
+.water-card { border: 2px solid rgba(59, 130, 246, 0.15); } 
+
+.card-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.icon-box-card {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.green-icon-bg { background-color: #ecfdf5; color: #10b981; }
+.yellow-icon-bg { background-color: #fffbeb; color: #f59e0b; }
+.blue-icon-bg { background-color: #eff6ff; color: #3b82f6; }
+
+.status-badge {
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+.green-badge { background-color: #ecfdf5; color: #10b981; }
+.yellow-badge { background-color: #fffbeb; color: #d97706; }
+
+.card-body h4 { font-size: 18px; color: #1e293b; margin-bottom: 4px; }
+.card-body p { font-size: 13.5px; color: #64748b; margin-bottom: 8px; }
+.last-update { font-size: 11.5px; color: #94a3b8; display: block; }
+
+.roadmap-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 25px;
+    width: 100%;
+    align-items: start;
+    margin-bottom: 40px;
+}
+
+.white-card-box, .info-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid #f1f5f9;
+}
+
+.card-header-flex {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f1f5f9; 
+    margin-bottom: 15px;
+}
+
+.card-header-flex h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.card-header-flex i {
+    font-size: 16px;
+    color: var(--primary-blue);
+}
+
+.vertical-timeline-container {
+    position: relative;
+    padding-right: 50px; 
+    margin-top: 40px;
+}
+
+.roadmap-step {
+    position: relative;
+    margin-bottom: 30px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.roadmap-step::before {
+    content: "";
+    position: absolute;
+    right: -29px; 
+    top: 35px;
+    bottom: -15px;
+    width: 2px;
+    background: #e2e8f0; 
+}
+
+.roadmap-step.done::before { background: #10b981; }
+.roadmap-step:last-child::before { display: none; }
+
+.step-marker {
+    position: absolute;
+    right: -48px; 
+    width: 45px;  
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border: 2px solid #ffffff;
+    font-weight: bold;
+    z-index: 2;
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+.roadmap-step.done .step-marker { background: #10b981; color: #ffffff; }
+.roadmap-step.active .step-marker {
+    background: #f59e0b;
+    color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.15); 
+}
+
+.step-details { padding-right: 5px; }
+.step-title-row {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+    margin-bottom: 30px;
+}
+
+.step-title-row h4 {
+    font-size: 15px; 
+    color: #1e293b;
+    font-weight: 700;
+}
+
+.step-details p { font-size: 13px; color: #64748b; }
+.step-date-text { font-size: 11px !important; color: #94a3b8; margin-top: 2px; }
+.font-w { font-weight: 600; color: #f59e0b !important; }
+
+.badge-tag {
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+.green-t { background: #ecfdf5; color: #10b981; }
+.orange-t { background: #fffbeb; color: #d97706; }
+.gray-t { background: #f1f5f9; color: #94a3b8; }
+
+.safety-list { list-style: none; }
+.safety-list li {
+    padding: 10px 12px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+.safety-list li.done { background: #f0fdf4; color: #166534; }
+.safety-list li.working { background: #fffbeb; color: #854d0e; border: 1px solid #fef08a; }
+.safety-list li.soon { background: #f8fafc; color: #64748b; }
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.status-icon { font-size: 14px; }
+.task-name { font-size: 13px; font-weight: 600; display: block; }
+.task-date { font-size: 11px; opacity: 0.8; }
+
+.mini-calendar { display: flex; flex-direction: column; gap: 10px; }
+.cal-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+.cal-row p { flex: 1; color: #475569; }
+.cal-row .date { font-size: 11.5px; color: #94a3b8; }
+.cal-row .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}
+.dot.green { background-color: #10b981; }
+.dot.blue { background-color: #3b82f6; }
+.dot.orange { background-color: #f59e0b; }
+.cal-row.current p { font-weight: 700; color: #1e293b; }
+
+.mt-20 { margin-top: 20px; }
+
+.bottom-support-banner-v2 {
+    background-color: #eff6ff; 
+    border: 1px solid #dbeafe;
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.support-title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.avatar-circle-blue {
+    background-color: #3b82f6;
+    color: #ffffff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.support-title-row h4 { font-size: 15px; color: #1e293b; font-weight: 700; }
+.support-desc { font-size: 13px; color: #64748b; margin-bottom: 15px; line-height: 1.6; }
+
+.support-actions-row { display: flex; gap: 10px; }
+.btn-primary-blue, .btn-outline-gray {
+    font-family: 'Cairo', sans-serif;
+    padding: 8px 18px;
+    border-radius: 10px;
+    font-size: 12.5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-primary-blue { background-color: #3b82f6; color: white; border: none; }
+.btn-primary-blue:hover { background-color: #2563eb; }
+.btn-outline-gray { background-color: white; color: #475569; border: 1px solid #e2e8f0; }
+.btn-outline-gray:hover { background-color: #f8fafc; }
+
+@media (max-width: 768px) {
+    .services-status-grid, .roadmap-grid-layout {
+        grid-template-columns: 1fr;
+    }
+}

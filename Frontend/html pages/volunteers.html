@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مركز المتطوعين والمنظمات - إعادة البناء</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../Css/volunteers.css">
+    <link rel="stylesheet" href="../Css/header.css">
+</head>
+<body>
+    <header class="rb-main-header">
+        <div class="rb-header-container">
+            <a href="index.html" class="rb-logo-wrapper">
+                <div class="rb-logo-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <span class="rb-logo-text">إعادة البناء</span>
+            </a>
+            <button class="rb-menu-toggle" id="rbMenuToggle" aria-label="قائمة التنقل">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="rb-overlay" id="rbOverlay"></div>
+
+            <nav class="rb-nav-box" id="rbNavBox">
+                <ul class="rb-nav-list">
+                    <li>
+                        <a href="../html pages/dashboard.html" class="rb-nav-link rb-active">
+                            <i class="fas fa-th-large"></i> لوحة التحكم
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./document-loss.html" class="rb-nav-link">
+                            <i class="fas fa-file-alt"></i> توثيق الخسارة
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./admin-dashboard.html" class="rb-nav-link">
+                            <i class="fas fa-cog"></i> الإدارة
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="rb-header-left"></div>
+        </div>
+    </header>
+
+    <div class="volunteers-hero-banner">
+        <div class="hero-users-icon">
+            <i class="fas fa-user-friends"></i>
+        </div>
+        <h1>مركز المتطوعين والمنظمات</h1>
+        <p>تواصل مع فريق الدعم المخصص لك واستفد من خدمات المنظمات الإنسانية</p>
+    </div>
+
+    <div class="dashboard-wrapper">
+        <div class="alert-info-box">
+            <div class="alert-header">
+                <i class="far fa-check-circle check-icon"></i>
+                <strong>لديك 3 أعضاء فريق معينين</strong>
+            </div>
+            <p>فريقك المخصص جاهز لمساعدتك في جميع احتياجاتك، يمكنك التواصل معهم مباشرة في أي وقت.</p>
+        </div>
+
+        <h2 class="section-main-title">فريق الدعم المخصص</h2>
+
+        <div class="support-team-grid">
+            <div class="member-card border-blue">
+                <div class="card-top-header">
+                    <div class="member-avatar-circle bg-blue">سح</div>
+                    <span class="status-pill blue-pill">متاحة</span>
+                </div>
+                <div class="member-info-content">
+                    <h3 class="member-name">سارة حسن</h3>
+                    <p class="member-role">مسؤولة الحالة الرئيسية</p>
+                    <span class="member-org"><i class="fas fa-building"></i> الأونروا</span>
+                    <div class="member-contact-info">
+                        <div class="contact-item"><span class="direction-ltr">2222 111 59 970+</span> <i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-item"><span>sarah.h@unrwa.org</span> <i class="far fa-envelope"></i></div>
+                    </div>
+                </div>
+                <div class="card-actions-row">
+                    <button class="btn-action-call"><i class="fas fa-phone-alt"></i> اتصال</button>
+                    <button class="btn-action-msg"><i class="far fa-comment-alt"></i> رسالة</button>
+                </div>
+            </div>
+
+            <div class="member-card border-green">
+                <div class="card-top-header">
+                    <div class="member-avatar-circle bg-green">مع</div>
+                    <span class="status-pill green-pill">متاح</span>
+                </div>
+                <div class="member-info-content">
+                    <h3 class="member-name">محمود علي</h3>
+                    <p class="member-role">مسؤول ميداني</p>
+                    <span class="member-org"><i class="fas fa-building"></i> الهلال الأحمر</span>
+                    <div class="member-contact-info">
+                        <div class="contact-item"><span class="direction-ltr">4444 333 59 970+</span> <i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-item"><span>mahmoud.a@redcrescent.org</span> <i class="far fa-envelope"></i></div>
+                    </div>
+                </div>
+                <div class="card-actions-row">
+                    <button class="btn-action-call"><i class="fas fa-phone-alt"></i> اتصال</button>
+                    <button class="btn-action-msg"><i class="far fa-comment-alt"></i> رسالة</button>
+                </div>
+            </div>
+
+            <div class="member-card border-pink">
+                <div class="card-top-header">
+                    <div class="member-avatar-circle bg-pink">لأ</div>
+                    <span class="status-pill pink-pill">متاحة عند الطلب</span>
+                </div>
+                <div class="member-info-content">
+                    <h3 class="member-name">د. ليلى أحمد</h3>
+                    <p class="member-role">استشارية نفسية</p>
+                    <span class="member-org"><i class="fas fa-building"></i> أطباء بلا حدود</span>
+                    <div class="member-contact-info">
+                        <div class="contact-item"><span class="direction-ltr">6666 555 59 970+</span> <i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-item"><span>layla.a@msf.org</span> <i class="far fa-envelope"></i></div>
+                    </div>
+                </div>
+                <div class="card-actions-row">
+                    <button class="btn-action-call"><i class="fas fa-phone-alt"></i> اتصال</button>
+                    <button class="btn-action-msg"><i class="far fa-comment-alt"></i> رسالة</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-layout-grid">
+            <div class="packages-side">
+                <div class="white-section-card">
+                    <div class="section-card-header">
+                        <i class="fas fa-box text-blue"></i>
+                        <h3>حزم المساعدات</h3>
+                    </div>
+
+                    <div class="package-item-box bg-light-green">
+                        <div class="package-top-flex">
+                            <div class="pack-title-group">
+                                <h4><i class="fas fa-box text-green-dark"></i>حزمة الإغاثة الأساسية</h4>
+                                <span class="pack-sub"><i class="fas fa-building"></i> الأونروا</span>
+                            </div>
+                            <span class="pack-badge green-badge">مستلم</span>
+                        </div>
+                        <div class="pack-contents">
+                            <span class="content-tag">مواد غذائية</span>
+                            <span class="content-tag">مياه شرب</span>
+                            <span class="content-tag">بطانيات</span>
+                            <span class="content-tag">مستلزمات نظافة</span>
+                        </div>
+                        <div class="pack-date"><i class="far fa-clock"></i> 25 أبريل 2026</div>
+                    </div>
+
+                    <div class="package-item-box bg-light-blue">
+                        <div class="package-top-flex">
+                            <div class="pack-title-group">
+                                <h4><i class="fas fa-hotel text-blue-dark"></i>مساعدة الإيواء المؤقت </h4>
+                                <span class="pack-sub"><i class="fas fa-building"></i> الهلال الأحمر</span>
+                            </div>
+                            <span class="pack-badge blue-badge">موافق عليه</span>
+                        </div>
+                        <div class="pack-contents">
+                            <span class="content-tag">خيمة عائلية</span>
+                            <span class="content-tag">مراتب</span>
+                            <span class="content-tag">أدوات طبخ أساسية</span>
+                        </div>
+                        <div class="pack-date"><i class="far fa-clock"></i> متوقع: 5 مايو 2026</div>
+                    </div>
+
+                    <div class="package-item-box bg-light-orange">
+                        <div class="package-top-flex">
+                            <div class="pack-title-group">
+                                <h4><i class="fas fa-graduation-cap text-orange-dark"></i>دعم الأطفال التعليمي</h4>
+                                <span class="pack-sub"><i class="fas fa-building"></i> اليونيسف</span>
+                            </div>
+                            <span class="pack-badge orange-badge">قيد المراجعة</span>
+                        </div>
+                        <div class="pack-contents">
+                            <span class="content-tag">حقائب مدرسية</span>
+                            <span class="content-tag">قرطاسية</span>
+                            <span class="content-tag">كتب تعليمية</span>
+                        </div>
+                        <div class="pack-date"><i class="far fa-clock"></i> قيد المراجعة</div>
+                    </div>
+
+                    <button class="btn-request-more">طلب مساعدة إضافية</button>
+                </div>
+            </div>
+
+            <div class="organizations-side">
+                <div class="white-section-card">
+                    <div class="section-card-header">
+                        <i class="fas fa-building text-blue"></i>
+                        <h3>المنظمات المتاحة</h3>
+                    </div>
+
+                    <div class="org-list-wrapper">
+                        <div class="org-list-item">
+                            <div class="org-item-text">
+                                <strong>الأونروا</strong>
+                                <span class="org-desc">الإغاثة، التعليم، الصحة</span>
+                                <span class="org-meta"><i class="fas fa-phone-alt"></i> 7333 677 8 970+</span>
+                                <span class="org-meta"><i class="fas fa-map-marker-alt"></i> غزة - الرمال</span>
+                            </div>
+                        </div>
+                        <div class="org-list-item">
+                            <div class="org-item-text">
+                                <strong>الهلال الأحمر الفلسطيني</strong>
+                                <span class="org-desc">الطوارئ، الطبية، الإيواء</span>
+                                <span class="org-meta"><i class="fas fa-phone-alt"></i> 4346 284 8 970+</span>
+                                <span class="org-meta"><i class="fas fa-map-marker-alt"></i> غزة - الشجاعية</span>
+                            </div>
+                        </div>
+                        <div class="org-list-item">
+                            <div class="org-item-text">
+                                <strong>أطباء بلا حدود</strong>
+                                <span class="org-desc">الرعاية الصحية، الدعم النفسي</span>
+                                <span class="org-meta"><i class="fas fa-phone-alt"></i> 4587 282 8 970+</span>
+                                <span class="org-meta"><i class="fas fa-map-marker-alt"></i> غزة - النصر</span>
+                            </div>
+                        </div>
+                        <div class="org-list-item">
+                            <div class="org-item-text">
+                                <strong>اليونيسف</strong>
+                                <span class="org-desc">حماية الأطفال، التعليم</span>
+                                <span class="org-meta"><i class="fas fa-phone-alt"></i> 9999 283 8 970+</span>
+                                <span class="org-meta"><i class="fas fa-map-marker-alt"></i> غزة - المركز</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="white-section-card mt-24">
+                    <div class="section-card-header">
+                        <i class="fas fa-user-plus text-purple"></i>
+                        <h3>طلبات المتطوعين</h3>
+                    </div>
+                    
+                    <div class="volunteer-req-list">
+                        <div class="v-req-item border-left-red">
+                            <div class="v-req-info">
+                                <strong>نقل أثاث <span class="v-date">2 مايو 2026</span></strong>
+                                <small>3 متطوعين مطلوبين</small>
+                            </div>
+                            <span class="req-badge-urgency red-urg">عاجل</span>
+                        </div>
+
+                        <div class="v-req-item border-left-orange">
+                            <div class="v-req-info">
+                                <strong>إصلاحات منزلية بسيطة <span class="v-date">8 مايو 2026</span></strong>
+                                <small>2 متطوعين مطلوبين</small>
+                            </div>
+                            <span class="req-badge-urgency orange-urg">متوسط</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-submit-volunteer">طلب متطوعين جدد</button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="help-footer-banner">
+            <div class="help-footer-right">
+                <div class="help-footer-icon"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="heart-icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                    </svg>
+                </div>
+                <div class="help-footer-text">
+                    <h3>هل تحتاج إلى مساعدة إضافية؟</h3>
+                    <p>إذا كنت بحاجة إلى دعم إضافي أو ترغب في التواصل مع منظمات أخرى، يمكننا مساعدتك في ذلك. فريقنا جاهز للإجابة على أي أسئلة لديك.</p>
+                </div>
+            </div>
+            <div class="help-footer-buttons">
+                <button class="btn-solid-blue-footer">تواصل مع منسق المتطوعين</button>
+                <button class="btn-outline-dark">اتصل بالخط الساخن</button>
+            </div>
+        </footer>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل طلب توثيق الخسارة - REQ-2847</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../Css/verification.css">
+    <link rel="stylesheet" href="../Css/header.css">
+</head>
+<body>
+
+<header class="rb-main-header">
+    <div class="rb-header-container">
+        <a href="index.html" class="rb-logo-wrapper">
+            <div class="rb-logo-icon">
+                <i class="fas fa-home"></i>
+            </div>
+            <span class="rb-logo-text">إعادة البناء</span>
+        </a>
+        <button class="rb-menu-toggle" id="rbMenuToggle" aria-label="قائمة التنقل">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="rb-overlay" id="rbOverlay"></div>
+
+        <nav class="rb-nav-box" id="rbNavBox">
+            <ul class="rb-nav-list">
+                <li>
+                    <a href="../html pages/dashboard.html" class="rb-nav-link rb-active">
+                        <i class="fas fa-th-large"></i> لوحة التحكم
+                    </a>
+                </li>
+                <li>
+                    <a href="./document-loss.html" class="rb-nav-link">
+                        <i class="fas fa-file-alt"></i> توثيق الخسارة
+                    </a>
+                </li>
+                <li>
+                    <a href="./admin-dashboard.html" class="rb-nav-link">
+                        <i class="fas fa-cog"></i> الإدارة
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="rb-header-left"></div>
+    </div>
+</header>
+
+<section class="request-blue-banner-fluid">
+    <div class="banner-inner-content">
+        <div class="banner-right-side">
+            <div class="report-meta-wrapper">
+                <div class="report-icon-container">
+                    <i class="far fa-file-alt"></i>
+                </div>
+                <div class="report-text-block">
+                    <span class="req-label">رقم التقرير</span>
+                    <h2 class="req-number">REQ-2847</h2>
+                </div>
+            </div>
+            <p class="banner-subtitle" id="view-banner-loss-type">تقرير توثيق خسارة - عقار سكني</p>
+        </div>
+        <div class="banner-left-side">
+            <span class="badge-status-yellow">
+                <i class="far fa-clock"></i> قيد التحقق
+            </span>
+        </div>
+    </div>
+</section>
+
+<div class="dashboard-wrapper">
+    <div class="top-info-cards-grid">
+        <div class="info-mini-card">
+            <div class="card-icon-title">
+                <i class="far fa-user text-blue"></i>
+                <span>مقدم الطلب</span>
+            </div>
+            <h3 id="view-fullname">&nbsp;</h3>
+            <p class="sub-detail" id="view-phone">+970 59 123 4567</p>
+            <p class="sub-detail text-muted" id="view-email">ahmed.hassan@email.com</p>
+        </div>
+<div class="info-mini-card">
+    <div class="card-icon-title">
+        <i class="far fa-calendar-alt text-blue"></i>
+        <span>تاريخ التقديم</span>
+    </div>
+    <h3 id="view-date">28 أبريل 2026</h3>
+    <p class="sub-detail" id="view-time">الساعة 2:30 مساءً</p>
+
+<span id="view-time-ago">الآن</span>
+</div>
+
+<div class="info-mini-card">
+    <div class="card-icon-title">
+        <i class="fas fa-dollar-sign text-blue"></i>
+        <span>القيمة المقدرة</span>
+    </div>
+    <h3 class="amount-text" id="view-amount">$45,000</h3> <p class="sub-detail text-muted">قيمة تقديرية</p>
+</div>
+    </div>
+
+    <div class="main-two-columns-layout">
+        <div class="right-content-column">
+            <div class="content-white-card">
+                <div class="card-inner-header">
+                    <i class="far fa-file-alt text-blue"></i>
+                    <h3>تفاصيل الخسارة</h3>
+                </div>
+                
+                <div class="details-field-group">
+                    <label>نوع الخسارة</label>
+                    <p class="field-value-bold" id="view-loss-type">عقار سكني</p>
+                </div>
+
+                <div class="details-field-group">
+                    <label>الموقع</label>
+                    <p class="field-value-icon" id="view-address"><i class="fas fa-map-marker-alt"></i> شارع الجلاء، حي الرمال، غزة</p>
+                    <p class="coordinates-text" id="view-coordinates">الإحداثيات: 31.5000 , 34.5000</p>
+                </div>
+
+                <div class="details-field-group">
+                    <label>الوصف التفصيلي</label>
+                    <p class="field-description-text" id="view-description">منزل مكون من طابقين، المساحة الإجمالية 180 متر مربع. تعرض المنزل لأضرار جسيمة في الطابق العلوي مع انهيار جزئي في السقف وتضرر شديد في الجدران الخارجية. الطابق الأرضي متضرر بشكل معتدل، المنزل كان بحالة ممتازة قبل الأحداث ويحتاج إلى إصلاحات شاملة.</p>
+                </div>
+
+                <div class="details-field-group">
+                    <label>حجم العائلة</label>
+                    <p class="field-value-bold" id="view-family-size">6 أفراد</p>
+                </div>
+            </div>
+
+            <div class="content-white-card">
+                <div class="card-inner-header">
+                    <i class="far fa-clock text-blue"></i>
+                    <h3>الجدول الزمني للتحقق</h3>
+                </div>
+
+                <div class="timeline-vertical-flow">
+                    <div class="timeline-step-item checked-step">
+                        <div class="step-circle-icon"><i class="fas fa-check"></i></div>
+                        <div class="step-content-text">
+                            <h4>تم تقديم التقرير</h4>
+                            <p id="timeline-submit-time">28 أبريل 2026، 2:30 م</p>
+                            <span class="user-stamp" id="view-fullname-stamp">أحمد حسن</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step-item checked-step">
+                        <div class="step-circle-icon"><i class="fas fa-check"></i></div>
+                        <div class="step-content-text">
+                            <h4>تم استلام التقرير</h4>
+                            <p>28 أبريل 2026، 4:15 م</p>
+                            <span class="user-stamp">النظام</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step-item checked-step">
+                        <div class="step-circle-icon"><i class="fas fa-check"></i></div>
+                        <div class="step-content-text">
+                            <h4>بدأت المراجعة الأولية</h4>
+                            <p>29 أبريل 2026، 10:00 ص</p>
+                            <span class="user-stamp">سارة حسن</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step-item checked-step">
+                        <div class="step-circle-icon"><i class="fas fa-check"></i></div>
+                        <div class="step-content-text">
+                            <h4>طلب توضيح وإضافات</h4>
+                            <p>29 أبريل 2026، 3:45 م</p>
+                            <span class="user-stamp">سارة حسن</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step-item checked-step">
+                        <div class="step-circle-icon"><i class="fas fa-check"></i></div>
+                        <div class="step-content-text">
+                            <h4>تم تقديم المستندات الإضافية</h4>
+                            <p>30 أبريل 2026، 9:20 ص</p>
+                            <h3 id="view-fullname">&nbsp;</h3>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step-item current-orange-step">
+                        <div class="step-circle-icon"><i class="far fa-clock"></i></div>
+                        <div class="step-content-text">
+                            <h4>جاري التحقق الميداني</h4>
+                            <p>30 أبريل 2026، 2:00 م</p>
+                            <span class="user-stamp">فريق التحقق</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step-item future-muted-step">
+                        <div class="step-circle-icon"><i class="far fa-circle"></i></div>
+                        <div class="step-content-text">
+                            <h4>المراجعة النهائية</h4>
+                            <p class="text-muted">متوقع: 2 مايو 2026</p>
+                            <span class="user-stamp text-muted">لجنة التحقق</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+   <div class="left-content-column">
+    <div class="content-white-card">
+        <div class="card-inner-header">
+            <i class="far fa-image text-blue"></i>
+            <h3>المستندات المرفقة</h3>
+        </div>
+
+        <div class="photo-attachments-grid" id="view-images-container">
+            <div class="photo-placeholder-box">
+                <div class="photo-image-area" id="img-box-0">
+                    <i class="far fa-image placeholder-img-icon"></i>
+                    <div class="photo-overlay-actions">
+                        <button class="overlay-btn"><i class="far fa-eye"></i></button>
+                        <button class="overlay-btn"><i class="fas fa-download"></i></button>
+                    </div>
+                </div>
+                <span class="photo-label-under">واجهة المنزل - قبل</span>
+            </div>
+            
+            <div class="photo-placeholder-box">
+                <div class="photo-image-area" id="img-box-1">
+                    <i class="far fa-image placeholder-img-icon"></i>
+                    <div class="photo-overlay-actions">
+                        <button class="overlay-btn"><i class="far fa-eye"></i></button>
+                        <button class="overlay-btn"><i class="fas fa-download"></i></button>
+                    </div>
+                </div>
+                <span class="photo-label-under">واجهة المنزل - بعد</span>
+            </div>
+            
+            <div class="photo-placeholder-box">
+                <div class="photo-image-area" id="img-box-2">
+                    <i class="far fa-image placeholder-img-icon"></i>
+                    <div class="photo-overlay-actions">
+                        <button class="overlay-btn"><i class="far fa-eye"></i></button>
+                        <button class="overlay-btn"><i class="fas fa-download"></i></button>
+                    </div>
+                </div>
+                <span class="photo-label-under">الأضرار الهيكلية</span>
+            </div>
+            
+            <div class="photo-placeholder-box">
+                <div class="photo-image-area" id="img-box-3">
+                    <i class="far fa-image placeholder-img-icon"></i>
+                    <div class="photo-overlay-actions">
+                        <button class="overlay-btn"><i class="far fa-eye"></i></button>
+                        <button class="overlay-btn"><i class="fas fa-download"></i></button>
+                    </div>
+                </div>
+                <span class="photo-label-under">الغرف الداخلية</span>
+            </div>
+        </div>
+
+<div id="view-pdf-container">
+    
+    <div class="pdf-row-item static-file">
+        <div class="pdf-right-section">
+            <div class="pdf-icon-bg"><i class="far fa-file-pdf pdf-red-icon"></i></div>
+            <div class="pdf-info-middle">
+                <span class="pdf-name">سند الملكية</span>
+                <span class="pdf-size">450 KB</span>
+            </div>
+        </div>
+        <i class="fas fa-download download-cloud-icon"></i>
+    </div>
+
+    <div class="pdf-row-item static-file">
+        <div class="pdf-right-section">
+            <div class="pdf-icon-bg"><i class="far fa-file-pdf pdf-red-icon"></i></div>
+            <div class="pdf-info-middle">
+                <span class="pdf-name">فاتورة الكهرباء</span>
+                <span class="pdf-size">220 KB</span>
+            </div>
+        </div>
+        <i class="fas fa-download download-cloud-icon"></i>
+    </div>
+
+</div>
+
+        <button class="btn-download-all-docs"><i class="fas fa-download"></i> تحميل جميع المستندات</button>
+    </div>
+<div class="content-white-card">
+                <div class="card-inner-header">
+                    <i class="far fa-comment-dots text-blue"></i>
+                    <h3>ملاحظات التحقق</h3>
+                </div>
+
+                <div class="comments-stack-list">
+                    <div class="comment-bubble-box bg-light-blue">
+                        <div class="comment-meta-row">
+                            <strong>سارة حسن - مسؤولة الحالة</strong>
+                            <span class="comment-date">29 أبريل 2026</span>
+                        </div>
+                        <p class="comment-msg">الوثائق المقدمة واضحة ومفصلة، تم طلب صور إضافية للأضرار الداخلية للتقييم الدقيق.</p>
+                    </div>
+
+                    <div class="comment-bubble-box bg-light-green">
+                        <div class="comment-meta-row">
+                            <strong>محمود علي - مفتش ميداني</strong>
+                            <span class="comment-date">30 أبريل 2026</span>
+                        </div>
+                        <p class="comment-msg">تم جدولة الزيارة الميدانية ليوم 1 مايو للتحقق من الأضرار الموثقة وتقييم حالة المبنى.</p>
+                    </div>
+                </div>
+
+                <button class="btn-add-comment-action">إضافة تعليق</button>
+            </div>
+
+            <div class="next-steps-green-card">
+                <div class="card-inner-header">
+                    <i class="far fa-check-circle text-green"></i>
+                    <h3 class="text-green">الخطوات التالية</h3>
+                </div>
+                <ul class="steps-bullet-list">
+                    <li>سيتم إجراء التحقق الميداني في 1 مايو 2026</li>
+                    <li>المراجعة النهائية من قبل لجنة التحقق متوقعة في 2 مايو</li>
+                    <li>سيتم إبلاغك بالقرار النهائي خلال 3-5 أيام عمل</li>
+                </ul>
+            </div>
+    </div>
+    </div>
+    
+</div>
+<script src="../js/main.js"></script>
+</body>
+</html>

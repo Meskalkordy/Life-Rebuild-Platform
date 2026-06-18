@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+body {
+    padding-top: 85px !important; 
+}
+
+.rb-main-header {
+    background-color: #ffffff;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+    border-bottom: 1px solid #f0f4f8;
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+    display: flex;
+    align-items: center;
+}
+
+.rb-header-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.rb-logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.rb-logo-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.rb-logo-icon {
+    background-color: #3b82f6; 
+    color: #ffffff;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.rb-nav-box {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.rb-nav-list {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.rb-nav-link {
+    text-decoration: none;
+    color: #64748b; 
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 12px; 
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.rb-nav-link i {
+    font-size: 16px;
+}
+
+.rb-nav-link:hover {
+    color: #3b82f6;
+    background-color: #f8fafc;
+}
+
+.rb-nav-link.rb-active {
+    background-color: #e0ecfb; 
+    color: #1d63ed; 
+}
+
+.rb-header-left {
+    width: 150px; 
+}
+
+.rb-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10000;
+    padding: 0;
+}
+
+.rb-menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: #1e293b;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.rb-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 9997;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.rb-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+    .rb-header-container {
+        padding: 0 16px;
+    }
+
+    .rb-logo-text {
+        font-size: 18px; 
+    }
+
+    .rb-header-left {
+        display: none;
+    }
+
+    .rb-menu-toggle {
+        display: flex;
+    }
+
+    .rb-menu-toggle.open span:nth-child(1) {
+        transform: translateY(7.5px) rotate(45deg);
+    }
+    
+    .rb-menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .rb-menu-toggle.open span:nth-child(3) {
+        transform: translateY(-7.5px) rotate(-45deg);
+    }
+
+    .rb-nav-box {
+        position: fixed;
+        top: 0;
+        left: -280px; 
+        width: 280px;
+        height: 100vh;
+        background-color: #ffffff;
+        box-shadow: 4px 0 25px rgba(0, 0, 0, 0.15);
+        z-index: 9998;
+        transition: left 0.3s ease-in-out;
+        display: block;
+        padding: 90px 20px 20px 20px;
+    }
+
+    .rb-nav-box.open {
+        left: 0;
+    }
+
+    .rb-nav-list {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .rb-nav-link {
+        padding: 14px 16px;
+        font-size: 14px;
+        width: 100%;
+        justify-content: flex-start;
+    }
+}

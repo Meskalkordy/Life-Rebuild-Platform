@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خارطة طريق العودة - إعادة البناء</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../Css/roadmap.css">
+    <link rel="stylesheet" href="../Css/header.css">
+</head>
+<body>
+    <header class="rb-main-header">
+        <div class="rb-header-container">
+            <a href="index.html" class="rb-logo-wrapper">
+                <div class="rb-logo-icon">
+                    <i class="fas fa-home" aria-hidden="true"></i> 
+                </div>
+                <span class="rb-logo-text">إعادة البناء</span>
+            </a>
+            <button class="rb-menu-toggle" id="rbMenuToggle" aria-label="قائمة التنقل">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="rb-overlay" id="rbOverlay"></div>
+
+            <nav class="rb-nav-box" id="rbNavBox">
+                <ul class="rb-nav-list">
+                    <li>
+                        <a href="../html pages/dashboard.html" class="rb-nav-link rb-active">
+                            <i class="fas fa-th-large" aria-hidden="true"></i> لوحة التحكم
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./document-loss.html" class="rb-nav-link">
+                            <i class="fas fa-file-alt" aria-hidden="true"></i> توثيق الخسارة
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./admin-dashboard.html" class="rb-nav-link">
+                            <i class="fas fa-cog" aria-hidden="true"></i> الإدارة
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="rb-header-left"></div>
+        </div>
+    </header>
+
+    <section class="roadmap-hero">
+        <div class="hero-icon">    
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pin-svg" aria-hidden="true" focusable="false">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+        </div>
+        <h1>خارطة طريق العودة</h1>
+        <p>تابع تقدمك خطوة بخطوة نحو العودة الآمنة إلى منزلك</p>
+    </section>
+
+    <main class="roadmap-wrapper">
+        <div class="progress-main-card">
+            <div class="progress-top-info">
+                <div class="family-header">
+               <h3 id="roadmap-family-name">عائلة </h3>
+
+<p class="road-sub-text" id="roadmap-location-name">جاري تحميل الموقع...</p>
+                </div>
+                <div class="percentage-display">
+                    <span class="pct-number">60%</span>
+                    <span class="pct-label">التقدم الإجمالي</span>
+                </div>
+            </div>
+
+            <div class="progress-track">
+                <div class="progress-fill" style="width: 60%;"></div>
+            </div>
+
+            <div class="status-summary-nodes">
+                <div class="node-item">
+                    <span class="node-count">3</span>
+                    <span class="node-label">مراحل مكتملة</span>
+                </div>
+                <div class="node-separator"></div>
+                <div class="node-item active-node">
+                    <span class="node-count">1</span>
+                    <span class="node-label">قيد التنفيذ</span>
+                </div>
+                <div class="node-separator"></div>
+                <div class="node-item">
+               
+                    <span class="node-count">2</span>
+                    <span class="node-label">معلقة</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="services-status-grid">
+            <div class="service-status-card water-card">
+                <div class="card-header">
+                    <div class="icon-box-card blue-icon-bg">
+                        <i class="fa-solid fa-droplet" aria-hidden="true"></i>
+                    </div>
+                    <span class="status-badge green-badge">نشط</span>
+                </div>
+                <div class="card-body">
+                    <h4>المياه</h4>
+                    <p>متصل ويعمل بكامل الطاقة</p>
+                    <span class="last-update">آخر فحص: منذ ساعتين</span>
+                </div>
+            </div>
+
+            <div class="service-status-card electricity-card">
+                <div class="card-header">
+                    <div class="icon-box-card yellow-icon-bg">
+                        <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                    </div>
+                    <span class="status-badge yellow-badge">جزئي</span>
+                </div>
+                <div class="card-body">
+                    <h4>الكهرباء</h4>
+                    <p>متصل - 6 ساعات يومياً</p>
+                    <span class="last-update">آخر فحص: منذ 30 دقيقة</span>
+                </div>
+            </div>
+         
+            <div class="service-status-card security-card">
+                <div class="card-header">
+                    <div class="icon-box-card green-icon-bg">
+                        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                    </div>
+                    <span class="status-badge green-badge">نشط</span>
+                </div>
+                <div class="card-body">
+                    <h4>الأمان</h4>
+                    <p>المنطقة آمنة ومفتشة</p>
+                    <span class="last-update">آخر فحص: منذ يوم واحد</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="roadmap-grid-layout">
+            <div class="roadmap-stages-side">
+                <div class="white-card-box">
+                    <div class="card-header-flex">
+                        <i class="fa-solid fa-route" aria-hidden="true"></i>
+                        <h3>مراحل خارطة الطريق</h3>
+                    </div>
+
+                    <div class="vertical-timeline-container">
+                        <div class="roadmap-step done">
+                            <div class="step-marker"><i class="fa-solid fa-check" aria-hidden="true"></i></div>
+                            <div class="step-details">
+                                <div class="step-title-row">
+                                    <h4>تقديم الطلب</h4>
+                                    <span class="badge-tag green-t">مكتمل</span>
+                                </div>
+                                <p>تم تقديم طلب العودة والموافقة الأولية</p>
+                                <p class="step-date-text">15 أبريل 2026</p>
+                            </div>
+                        </div>
+
+                        <div class="roadmap-step done">
+                            <div class="step-marker"><i class="fa-solid fa-check" aria-hidden="true"></i></div>
+                            <div class="step-details">
+                                <div class="step-title-row">
+                                    <h4>فحص السلامة</h4>
+                                    <span class="badge-tag green-t">مكتمل</span>
+                                </div>
+                                <p>تقييم سلامة المنطقة والمبنى</p>
+                                <p class="step-date-text">22 أبريل 2026</p>
+                            </div>
+                        </div>
+
+                        <div class="roadmap-step active">
+                            <div class="step-marker">3</div>
+                            <div class="step-details">
+                                <div class="step-title-row">
+                                    <h4>إعادة المرافق</h4>
+                                    <span class="badge-tag orange-t">جاري</span>
+                                </div>
+                                <p>استعادة المياه والكهرباء والخدمات</p>
+                                <p class="step-date-text font-w">متوقع: 5 مايو 2026</p>
+                            </div>
+                        </div>
+
+                        <div class="roadmap-step locked">
+                            <div class="step-marker"><i class="fa-solid fa-hammer" aria-hidden="true"></i></div>
+                            <div class="step-details">
+                                <div class="step-title-row">
+                                    <h4>الإصلاحات الأساسية</h4>
+                                    <span class="badge-tag gray-t">معلق</span>
+                                </div>
+                                <p>إصلاح الأضرار الهيكلية والضرورية</p>
+                                <p class="step-date-text">متوقع: 15 مايو 2026</p>
+                            </div>
+                        </div>
+
+                        <div class="roadmap-step locked">
+                            <div class="step-marker"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+                            <div class="step-details">
+                                <div class="step-title-row">
+                                    <h4>العودة النهائية</h4>
+                                    <span class="badge-tag gray-t">معلق</span>
+                                </div>
+                                <p>الموافقة النهائية والعودة للمنزل</p>
+                                <p class="step-date-text">متوقع: 1 يونيو 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="side-column">
+                <div class="info-card">
+                    <div class="card-header-flex">
+                        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                        <h3>فحوصات السلامة</h3>
+                    </div>
+                    
+                    <ul class="safety-list">
+                        <li class="done">
+                            <div class="content-wrapper">
+                                <i class="fa-solid fa-circle-check status-icon" aria-hidden="true"></i>
+                                <div class="text-group">
+                                    <span class="task-name">تفتيش المبنى</span>
+                                    <span class="task-date">20 أبريل 2026</span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="done">
+                            <div class="content-wrapper">
+                                <i class="fa-solid fa-circle-check status-icon" aria-hidden="true"></i>
+                                <div class="text-group">
+                                    <span class="task-name">فحص الألغام</span>
+                                    <span class="task-date">21 أبريل 2026</span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="done">
+                            <div class="content-wrapper">
+                                <i class="fa-solid fa-circle-check status-icon" aria-hidden="true"></i>
+                                <div class="text-group">
+                                    <span class="task-name">تقييم الأضرار الهيكلية</span>
+                                    <span class="task-date">22 أبريل 2026</span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="working">
+                            <div class="content-wrapper">
+                                <i class="fa-solid fa-clock status-icon" aria-hidden="true"></i>
+                                <div class="text-group">
+                                    <span class="task-name">فحص سلامة الطرق</span>
+                                    <span class="task-date">جاري العمل</span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="soon">
+                            <div class="content-wrapper">
+                                <i class="fa-solid fa-circle-info status-icon" aria-hidden="true"></i>
+                                <div class="text-group">
+                                    <span class="task-name">تقييم الخدمات العامة</span>
+                                    <span class="task-date">قريباً</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="info-card mt-20">
+                    <div class="card-header-flex">
+                        <i class="fa-regular fa-calendar-days" aria-hidden="true"></i>
+                        <h3>الجدول الزمني</h3>
+                    </div>
+                    <div class="mini-calendar">
+                        <div class="cal-row">
+                            <span class="dot green"></span>
+                            <p>تقديم طلب العودة</p>
+                            <span class="date">15 أبريل</span>
+                        </div>
+                        <div class="cal-row">
+                            <span class="dot blue"></span>
+                            <p>بدء فحص السلامة</p>
+                            <span class="date">18 أبريل</span>
+                        </div>
+                        <div class="cal-row">
+                            <span class="dot green"></span>
+                            <p>اكتمال فحص السلامة</p>
+                            <span class="date">22 أبريل</span>
+                        </div>
+                        <div class="cal-row">
+                    
+                            <span class="dot blue"></span>
+                            <p>بدء إعادة توصيل المرافق</p>
+                            <span class="date">25 أبريل</span>
+                        </div>
+                        <div class="cal-row">
+                            <span class="dot green"></span>
+                            <p>توصيل المياه</p>
+                            <span class="date">28 أبريل</span>
+                        </div>
+                        <div class="cal-row">
+                            <span class="dot orange"></span>
+                            <p>توصيل الكهرباء جزئياً</p>
+                            <span class="date">30 أبريل</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div class="bottom-support-banner-v2">
+    <div class="support-title-row">
+        <div class="avatar-circle-blue">
+            <i class="fa-solid fa-users-gear" aria-hidden="true"></i>
+        </div>
+        <h4>فريق الدعم المخصص</h4>
+    </div>
+
+    <p class="support-desc">فريقنا متاح لمساعدتك في كل خطوة من رحلة العودة. لا تتردد في التواصل إذا كانت لديك أي أسئلة أو مخاوف.</p>
+
+    <div class="support-actions-row">
+        <button class="btn-primary-blue" onclick="contactStatusManager()">اتصل بمسؤول الحالة</button>
+        <button class="btn-outline-gray" onclick="requestEdit()">طلب تحديث</button>
+    </div>
+</div>
+
+<div id="fullChatScreen" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); justify-content: center; align-items: center; z-index: 99999; direction: rtl; font-family: 'Cairo', sans-serif; padding: 20px;">
+    <div style="background: white; border-radius: 12px; width: 100%; max-width: 650px; box-shadow: 0 5px 25px rgba(0,0,0,0.3); overflow: hidden; display: flex; flex-direction: column;">
+        
+        <div style="background: #1e3a8a; color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <div style="width: 40px; height: 40px; background: #3b82f6; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: bold; color: white;">سح</div>
+                <div>
+                    <h4 style="margin: 0; font-size: 16px;">سارة حسن (مسؤولة الحالة)</h4>
+                    <span style="font-size: 12px; color: #4ade80;"><span style="display:inline-block; width:8px; height:8px; background:#4ade80; border-radius:50%; margin-left:5px;"></span>متصلة الآن</span>
+                </div>
+            </div>
+            <button onclick="backToRoadmap()" style="background: #ef4444; border: none; color: white; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-family: 'Cairo'; font-weight: 600;">إغلاق الشات <i class="fas fa-times"></i></button>
+        </div>
+
+        <div id="fullChatBody" style="height: 320px; padding: 20px; overflow-y: auto; background: #f8fafc; display: flex; flex-direction: column; gap: 15px;">
+         <!-- الرسالة الترحيبية المعدلة لتقرأ الاسم ديناميكياً -->
+<div style="align-self: flex-start; max-width: 75%; background: white; padding: 12px 15px; border-radius: 0 12px 12px 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; line-height: 1.6;">
+    <p style="margin: 0; color: #334155; font-size: 14px;">
+        مرحباً عائلة <span id="chat-family-name" style="font-weight: bold; color: #1e3a8a;">المواطن</span>، معكم مسؤولة الحالة سارة حسن. كيف يمكنني مساعدتكم اليوم في استفساراتكم حول خطة العودة؟
+    </p>
+    <span style="display: block; text-align: left; font-size: 10px; color: #94a3b8; margin-top: 5px;">10:05 ص</span>
+</div>
+        </div>
+
+        <div style="padding: 15px; background: white; border-top: 1px solid #e2e8f0; display: flex; gap: 10px;">
+            <input type="text" id="fullChatInput" placeholder="اكتب رسالتك لـ سارة حسن هنا..." style="flex: 1; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-family: 'Cairo'; outline: none; font-size: 14px;">
+            <button onclick="sendFullChatMessage()" style="background: #1e3a8a; color: white; border: none; padding: 0 20px; border-radius: 8px; cursor: pointer; font-family: 'Cairo'; font-weight: 600; font-size: 14px;">إرسال <i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+</div>
+    </main>
+    <script src="../js/main.js"></script>
+</body>
+</html>
